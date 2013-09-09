@@ -1,3 +1,5 @@
+#By Justin Blaisdell and Bonnie Mattson 
+
 class Cookbook
   attr_accessor :recipies
   def initialize
