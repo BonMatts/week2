@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Guess the Number!</title>
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+<script type="text/javascript">
+  // alert('Hello World!');
+  // var name = prompt("What is your name?");
+  // alert("Welcome back, "+ name);
+  var num = parseInt(Math.random() * 100, 10) + 1;;
+  var guess = prompt("Guess a number between 1 and 100");
+  var pick = function (guess, num){
+    if(guess > num){
+      guess=prompt("Too high! Guess again.");
+      pick(guess, num)      
+    }else if(guess < num){
+      guess = prompt("Too low. Guess again.");
+      pick(guess, num)
+    }else if (parseInt(guess) ===num){
+      alert("You guessed correctly!");
+    }else{
+      alert("not a number");
+    }
+
+  }
+  pick(guess, num);
+
+</script>
+<label>Pick a Number from 1-100</label>
+</body>
+</html>
